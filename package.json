@@ -1,12 +1,9 @@
 {
-  "name": "typescript-npm-package-tpl",
+  "name": "openapi-nodegen-mem-mongo-loader",
   "version": "1.0.0",
-  "description": "A set of files to get moving for a typescript npm package, remove all not required",
+  "description": "Help class to load mongo db memory and ten mongoose with 2 functions setup and stop",
   "licence": "MIT",
   "main": "./build/index.js",
-  "bin": {
-    "openapi-nodegen": "./build/cli.js"
-  },
   "scripts": {
     "install:githooks": "cp ./githooks/* .git/hooks",
     "test": "npm run lint && npm run test:unit",
@@ -15,7 +12,7 @@
     "lint": "tslint --project tsconfig.json --fix",
     "lint:fix": "tslint --project tsconfig.json --fix",
     "build:tocs": "npx doctoc .",
-    "build": "rm -fR ./build && ttsc -p .",
+    "build": "rm -fR ./build && ttsc -p . -d --declarationDir build",
     "build:watch": "ttsc --watch -p .",
     "start": "node cli.js",
     "prepublishOnly": "npm run lint && npm run test"
@@ -25,29 +22,31 @@
     "url": "https://github.com/johndcarmichael/openapi-nodegen-emailer.git"
   },
   "keywords": [
-    "swagger",
     "openapi",
-    "rest",
     "TypeScript",
-    "es6",
-    "es7",
-    "es2015",
     "node.js",
-    "codegen",
-    "generator"
+    "mongodb",
+    "mongoose",
+    "mongodb-memory-server"
   ],
   "dependencies": {
+    "mongodb-memory-server": "^6.2.1"
   },
   "devDependencies": {
     "@types/jest": "^24.0.25",
+    "@types/mongoose": "^5.5.37",
     "@zerollup/ts-transform-paths": "^1.7.9",
     "codecov": "^3.6.1",
     "eslint": "^6.8.0",
     "hasha": "^5.1.0",
     "jest": "^24.9.0",
+    "mongoose": "^5.8.3",
     "ts-jest": "^24.2.0",
     "tslint": "^5.20.1",
     "ttypescript": "^1.5.8",
     "typescript": "^3.7.4"
+  },
+  "peerDependencies": {
+    "mongoose": "^5.8.3"
   }
 }

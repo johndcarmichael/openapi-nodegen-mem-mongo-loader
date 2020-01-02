@@ -1,23 +1,40 @@
-# typescript-npm-package-tpl
+[![License](http://img.shields.io/npm/l/boats.svg)](https://github.com/johndcarmichael/openapi-nodegen-mem-mongo-loader/blob/master/LICENSE) | [![Dependencies](https://david-dm.org/johndcarmichael/openapi-nodegen-mem-mongo-loader.svg)](https://david-dm.org/johndcarmichael/openapi-nodegen-mem-mongo-loader) | [![Codecov Coverage](https://img.shields.io/codecov/c/github/johndcarmichael/openapi-nodegen-mem-mongo-loader/master.svg?style=flat-square)](https://codecov.io/gh/johndcarmichael/openapi-nodegen-mem-mongo-loader/) | [![Build Status](https://api.travis-ci.org/johndcarmichael/openapi-nodegen-mem-mongo-loader.svg?branch=master)](https://travis-ci.org/johndcarmichael/openapi-nodegen-mem-mongo-loader)
 
-Use this package to create a typescript based package for npm.
+# openapi-nodegen-mem-mongo-loader
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-Ensure you update:
-- package.json
-- .github/ISSUE_TEMPLATE files
-- githooks to your style
-- CODE_OF_CONDUCT
-- CONTRIBUTING
-- LICENCE
-- This readme file :)
-- Any anything else.
+- [Perquisites](#perquisites)
+- [Example](#example)
+- [Contribution](#contribution)
 
-## ttypescript:
-This uses ttypescript which allows use of the ts-transform-paths plugin found in the tsconfig.
-This basically transforms the output of any shortcuts (eg `@/myfile.ts`) to the full relative paths, without this the shortcuts break as node cannot resolve them.
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## CI + Coverage
-This is ready to go with travis and codecov, though you will need to create an account on both of these services and point them to the correct repos, but the travis.yml is about all you should need and the codecov as seen in the package.json file.
+A simple helper, setup helper and stop helper.
 
-## Missed anything?
-Create a pull request and get your input merged in, thanks.
+Handy for usage in jest tests, beforeAll and afterAll... but also/mainly.. I didn't want to write tests for this in my APIs or ignore in APIs jest config files.
+
+## Perquisites
+It assumes you use mongoose, should be installed in your API. It is marked as a peer dep in this package.json file.
+
+It does not assume you install mongodb-memory-server so installed as a dependency to this package.
+
+
+## Example
+```typescript
+describe('registerEmailPost domain', () => {
+
+  beforeAll(async () => {
+    await MemoryMongoDatabase.setup();
+  });
+
+  afterAll(async () => {
+    await MemoryMongoDatabase.stop();
+  });
+  // add some tests
+})
+```
+
+## Contribution
+Pull requests welcomed as always.
