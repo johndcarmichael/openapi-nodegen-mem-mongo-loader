@@ -8,15 +8,11 @@ class OpenapiNodegenMemMongoLoader {
     // Load the memory database and oass uri to mongoose
     this.mongoServer = new MongoMemoryServer();
     const mongoUri = await this.mongoServer.getUri();
-    await mongoose.connect(mongoUri, {}, (err: any) => {
-      if (err) {
-        console.error(err);
-      }
-    });
+    await mongoose.connect(mongoUri, {});
     return this.mongoServer;
   }
 
-  public async stop () {
+  public async teardown () {
     await mongoose.disconnect();
     await this.mongoServer.stop();
   }

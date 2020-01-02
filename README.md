@@ -23,14 +23,15 @@ It does not assume you install mongodb-memory-server so installed as a dependenc
 
 ## Example
 ```typescript
+import OpenapiNodegenMemMongoLoader from 'openapi-nodegen-mem-mongo-loader';
 describe('registerEmailPost domain', () => {
 
   beforeAll(async () => {
-    await MemoryMongoDatabase.setup();
+    await OpenapiNodegenMemMongoLoader.setup();
   });
 
   afterAll(async () => {
-    await MemoryMongoDatabase.stop();
+    await OpenapiNodegenMemMongoLoader.teardown();
   });
   // add some tests
 })

@@ -6,6 +6,6 @@ it('should setup ok', async (done) => {
 });
 
 it('should stop ok', async (done) => {
-  await OpenapiNodegenMemMongoLoader.stop();
+  await OpenapiNodegenMemMongoLoader.teardown();
   done();
 });

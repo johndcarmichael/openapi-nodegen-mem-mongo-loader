@@ -16,7 +16,7 @@ it('should setup ok', function (done) { return tslib_1.__awaiter(void 0, void 0,
 it('should stop ok', function (done) { return tslib_1.__awaiter(void 0, void 0, void 0, function () {
     return tslib_1.__generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, index_1["default"].stop()];
+            case 0: return [4 /*yield*/, index_1["default"].teardown()];
             case 1:
                 _a.sent();
                 done();

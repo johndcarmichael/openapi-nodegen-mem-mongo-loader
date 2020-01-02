@@ -17,11 +17,7 @@ var OpenapiNodegenMemMongoLoader = /** @class */ (function () {
                         return [4 /*yield*/, this.mongoServer.getUri()];
                     case 1:
                         mongoUri = _a.sent();
-                        return [4 /*yield*/, mongoose_1["default"].connect(mongoUri, {}, function (err) {
-                                if (err) {
-                                    console.error(err);
-                                }
-                            })];
+                        return [4 /*yield*/, mongoose_1["default"].connect(mongoUri, {})];
                     case 2:
                         _a.sent();
                         return [2 /*return*/, this.mongoServer];
@@ -29,7 +25,7 @@ var OpenapiNodegenMemMongoLoader = /** @class */ (function () {
             });
         });
     };
-    OpenapiNodegenMemMongoLoader.prototype.stop = function () {
+    OpenapiNodegenMemMongoLoader.prototype.teardown = function () {
         return tslib_1.__awaiter(this, void 0, void 0, function () {
             return tslib_1.__generator(this, function (_a) {
                 switch (_a.label) {
