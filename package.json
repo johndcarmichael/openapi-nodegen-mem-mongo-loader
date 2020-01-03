@@ -1,6 +1,6 @@
 {
   "name": "openapi-nodegen-mem-mongo-loader",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Help class to load mongo db memory and ten mongoose with 2 functions setup and stop",
   "licence": "MIT",
   "main": "./build/index.js",

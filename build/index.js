@@ -13,14 +13,14 @@ var OpenapiNodegenMemMongoLoader = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         // Load the memory database and oass uri to mongoose
-                        this.mongoServer = new mongodb_memory_server_1.MongoMemoryServer();
-                        return [4 /*yield*/, this.mongoServer.getUri()];
+                        global.OPENAPI_NODEGEN_MEM_MONGO_LOADER = new mongodb_memory_server_1.MongoMemoryServer();
+                        return [4 /*yield*/, global.OPENAPI_NODEGEN_MEM_MONGO_LOADER.getUri()];
                     case 1:
                         mongoUri = _a.sent();
                         return [4 /*yield*/, mongoose_1["default"].connect(mongoUri, {})];
                     case 2:
                         _a.sent();
-                        return [2 /*return*/, this.mongoServer];
+                        return [2 /*return*/];
                 }
             });
         });
@@ -32,7 +32,7 @@ var OpenapiNodegenMemMongoLoader = /** @class */ (function () {
                     case 0: return [4 /*yield*/, mongoose_1["default"].disconnect()];
                     case 1:
                         _a.sent();
-                        return [4 /*yield*/, this.mongoServer.stop()];
+                        return [4 /*yield*/, global.OPENAPI_NODEGEN_MEM_MONGO_LOADER.stop()];
                     case 2:
                         _a.sent();
                         return [2 /*return*/];

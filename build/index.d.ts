@@ -1,7 +1,5 @@
-import { MongoMemoryServer } from 'mongodb-memory-server';
 declare class OpenapiNodegenMemMongoLoader {
-    private mongoServer;
-    setup(): Promise<MongoMemoryServer>;
+    setup(): Promise<void>;
     teardown(): Promise<void>;
 }
 declare const _default: OpenapiNodegenMemMongoLoader;
