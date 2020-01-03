@@ -17,7 +17,10 @@ var OpenapiNodegenMemMongoLoader = /** @class */ (function () {
                         return [4 /*yield*/, global.OPENAPI_NODEGEN_MEM_MONGO_LOADER.getUri()];
                     case 1:
                         mongoUri = _a.sent();
-                        return [4 /*yield*/, mongoose_1["default"].connect(mongoUri, {})];
+                        return [4 /*yield*/, mongoose_1["default"].connect(mongoUri, {
+                                useNewUrlParser: true,
+                                useUnifiedTopology: true
+                            })];
                     case 2:
                         _a.sent();
                         return [2 /*return*/];

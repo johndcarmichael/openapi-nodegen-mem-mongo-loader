@@ -6,7 +6,10 @@ class OpenapiNodegenMemMongoLoader {
     // Load the memory database and oass uri to mongoose
     global.OPENAPI_NODEGEN_MEM_MONGO_LOADER = new MongoMemoryServer();
     const mongoUri = await global.OPENAPI_NODEGEN_MEM_MONGO_LOADER.getUri();
-    await mongoose.connect(mongoUri, {});
+    await mongoose.connect(mongoUri, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
   }
 
   public async teardown () {
