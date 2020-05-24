@@ -7,6 +7,7 @@ class OpenapiNodegenMemMongoLoader {
     global.OPENAPI_NODEGEN_MEM_MONGO_LOADER = new MongoMemoryServer();
     const mongoUri = await global.OPENAPI_NODEGEN_MEM_MONGO_LOADER.getUri();
     await mongoose.connect(mongoUri, {
+      poolSize: 15,
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
