@@ -19,7 +19,9 @@ var OpenapiNodegenMemMongoLoader = /** @class */ (function () {
                         mongoUri = _a.sent();
                         return [4 /*yield*/, mongoose_1["default"].connect(mongoUri, {
                                 poolSize: 15,
+                                useCreateIndex: true,
                                 useNewUrlParser: true,
+                                useFindAndModify: false,
                                 useUnifiedTopology: true
                             })];
                     case 2:
