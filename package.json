@@ -1,7 +1,7 @@
 {
   "name": "openapi-nodegen-mem-mongo-loader",
-  "version": "1.0.6",
-  "description": "Help class to load mongo db memory and ten mongoose with 2 functions setup and stop",
+  "version": "1.0.7",
+  "description": "Helper class to load mongo db memory and then mongoose with 2 functions setup and stop - for unit testing purposes",
   "licence": "MIT",
   "main": "./build/index.js",
   "scripts": {
@@ -40,13 +40,13 @@
     "eslint": "^7.1.0",
     "hasha": "^5.2.0",
     "jest": "^26.0.1",
-    "mongoose": "^5.9.15",
+    "mongoose": "^5.9.16",
     "ts-jest": "^26.0.0",
     "tslint": "^6.1.2",
     "ttypescript": "^1.5.10",
     "typescript": "^3.9.3"
   },
   "peerDependencies": {
-    "mongoose": "^5.9.15"
+    "mongoose": "^5.9.16"
   }
 }
