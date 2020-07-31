@@ -1,9 +1,10 @@
 {
   "name": "openapi-nodegen-mem-mongo-loader",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Helper class to load mongo db memory and then mongoose with 2 functions setup and stop - for unit testing purposes",
   "licence": "MIT",
   "main": "./build/index.js",
+  "types": "build/index.d.ts",
   "scripts": {
     "install:githooks": "cp ./githooks/* .git/hooks",
     "test": "npm run lint && npm run test:unit",
@@ -30,7 +31,7 @@
     "mongodb-memory-server"
   ],
   "dependencies": {
-    "mongodb-memory-server": "^6.6.1"
+    "mongodb-memory-server": "^6.6.3"
   },
   "devDependencies": {
     "@types/jest": "^25.2.3",
