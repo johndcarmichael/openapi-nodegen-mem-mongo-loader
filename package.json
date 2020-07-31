@@ -34,20 +34,20 @@
     "mongodb-memory-server": "^6.6.3"
   },
   "devDependencies": {
-    "@types/jest": "^25.2.3",
-    "@types/mongoose": "^5.7.21",
-    "@zerollup/ts-transform-paths": "^1.7.17",
-    "codecov": "^3.7.0",
-    "eslint": "^7.1.0",
+    "@types/jest": "^26.0.8",
+    "@types/mongoose": "^5.7.34",
+    "@zerollup/ts-transform-paths": "^1.7.18",
+    "codecov": "^3.7.2",
+    "eslint": "^7.5.0",
     "hasha": "^5.2.0",
-    "jest": "^26.0.1",
-    "mongoose": "^5.9.16",
-    "ts-jest": "^26.0.0",
+    "jest": "^26.2.1",
+    "mongoose": "^5.9.26",
+    "ts-jest": "^26.1.4",
     "tslint": "^6.1.2",
     "ttypescript": "^1.5.10",
-    "typescript": "^3.9.3"
+    "typescript": "^3.9.7"
   },
   "peerDependencies": {
-    "mongoose": "^5.9.16"
+    "mongoose": "^5.9.26"
   }
 }
